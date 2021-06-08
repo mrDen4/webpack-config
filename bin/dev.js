@@ -10,12 +10,12 @@ compiler.run((err) => {
         console.log('Compilation failed: ', err);
     }
 
-    compiler.watch({}, (err) => {
+    compiler.watch({}, (err, stats) => {
         if (err) {
-            console.log('Compilation failed: ', err);
+            console.log('Error: ', err);
         }
-        console.log('Compilation was successfully');
-    })
+        console.log('Complication was successfully');
+    });
 
     nodemon({
         script: path.resolve(__dirname, '../dist/server/server.js'),
@@ -24,4 +24,6 @@ compiler.run((err) => {
             path.resolve(__dirname, '../dist/client')
         ]
     })
-});
+})
+
+

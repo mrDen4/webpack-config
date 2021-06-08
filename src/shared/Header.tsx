@@ -1,3 +1,5 @@
 export const Header = () => (
-    <div>Hello from Header component</div>
+    <header>
+        <h1>Hello from Header component</h1>
+    </header>
 );
